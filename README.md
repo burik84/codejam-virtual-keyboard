@@ -1,5 +1,6 @@
 # virtual-keyboard
-создать виртуальную клавиатуру 
+
+[Виртуальная клавиатура](https://burik84.github.io/codejam-virtual-keyboard/)
 
 ---
 
