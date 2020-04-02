@@ -1,0 +1,24 @@
+{
+  "name": "codejam-virtual-keyboard",
+  "version": "1.0.0",
+  "description": "create virtual keyboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"browser-sync start --server --files '*.css, *.html, *.js'",
+    "style": "sass assets/style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burik84/codejam-virtual-keyboard.git"
+  },
+  "author": "burik84",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burik84/codejam-virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/burik84/codejam-virtual-keyboard#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
