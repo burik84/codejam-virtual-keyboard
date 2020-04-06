@@ -72,10 +72,14 @@ const KEYBOARD = {
                 case "Backspace":
                     keyElement.classList.add("keyboard__key--wide");
                     keyElement.innerHTML = createIconHTML("keyboard_backspace", key);
+                    keyElement.addEventListener("click", () => {
+                        this.properties.value = this.properties.value.substring(0, this.properties.value.length - 1);
+                        this._triggerEvent("oninput");
+                    });
                     break;
 
                 case "Caps Lock":
-                    keyElement.classList.add("keyboard__key--wide", "keyboard__key--activatable");
+                    keyElement.classList.add("keyboard__key--wide");
                     keyElement.innerHTML = createIconHTML("keyboard_capslock", key);
                     keyElement.addEventListener("click", () => {
                         this._toggleCapsLock();
@@ -86,35 +90,49 @@ const KEYBOARD = {
                 case "ENTER":
                     keyElement.classList.add("keyboard__key--wide");
                     keyElement.innerHTML = createIconHTML("keyboard_return", key);
+                    keyElement.addEventListener("click", () => {
+                        this.properties.value += "\n";
+                        this._triggerEvent("oninput");
+                    });
 
                     break;
                 case "&uarr;":
-                    keyElement.classList.add("keyboard__key");
+                    keyElement.classList.add("keyboard__key", "keyboard__key--disable");
                     keyElement.innerHTML = createIconHTML("arrow_upward", '');
 
                     break;
                 case "&larr;":
-                    keyElement.classList.add("keyboard__key");
+                    keyElement.classList.add("keyboard__key", "keyboard__key--disable");
                     keyElement.innerHTML = createIconHTML("arrow_back", '');
 
                     break;
                 case "&darr;":
-                    keyElement.classList.add("keyboard__key");
+                    keyElement.classList.add("keyboard__key", "keyboard__key--disable");
                     keyElement.innerHTML = createIconHTML("arrow_downward", '');
 
                     break;
                 case "&rarr;":
-                    keyElement.classList.add("keyboard__key");
+                    keyElement.classList.add("keyboard__key", "keyboard__key--disable");
                     keyElement.innerHTML = createIconHTML("arrow_forward", '');
 
                     break;
+                
+                case "Tab":case "DEL":case 'Alt': case 'Win': case 'Ctrl':
+                    keyElement.classList.add("keyboard__key", "keyboard__key--disable");
+                    keyElement.textContent = key.toLowerCase();
+                    break;
+
                 case "Shift":
-                    keyElement.classList.add("keyboard__key--large-wide");
+                    keyElement.classList.add("keyboard__key--large-wide", "keyboard__key--disable");
                     keyElement.textContent = key.toLowerCase();
                     break;
                 case " ":
                     keyElement.classList.add("keyboard__key--extra-wide");
                     keyElement.innerHTML = createIconHTML("space_bar", " ");
+                    keyElement.addEventListener("click", () => {
+                        this.properties.value += " ";
+                        this._triggerEvent("oninput");
+                    });
                     break;
                 default:
                     keyElement.textContent = key.toLowerCase();
