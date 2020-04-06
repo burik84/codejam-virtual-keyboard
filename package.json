@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server":"browser-sync start --server --files '*.css, *.html, *.js'",
-    "style": "sass assets/style.scss style.css"
+    "style": "sass assets/style.scss style.css",
+    "style-watch": "sass --watch assets/style.scss style.css"
   },
   "repository": {
     "type": "git",
