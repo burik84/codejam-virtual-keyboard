@@ -187,7 +187,6 @@ document.onkeypress=function(event){
     setTimeout(function () {
         elementCode.classList.remove('keyboard__key--press');
     }, 200);   
-    // KEYBOARD.properties.value+=elementKey;
 
     const outTextBox = document.getElementById('textbox');
     KEYBOARD.properties.value+=elementKey;
