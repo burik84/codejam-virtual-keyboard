@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"browser-sync start --server --files '*.css, *.html, *.js'",
+    "server": "browser-sync start --server --files '*.css, *.html, *.js'",
     "style": "sass assets/style.scss style.css",
     "style-watch": "sass --watch assets/style.scss style.css"
   },
@@ -20,6 +20,9 @@
   },
   "homepage": "https://github.com/burik84/codejam-virtual-keyboard#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
   }
 }

@@ -1,35 +1,35 @@
 .keyboard {
-    width: 100%;
-    padding: 5px 0;
-    margin: 20px 0;
-    border-radius: 5px;
-    background-color: #004134;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    user-select: none;
-    transition: bottom 0.4s;
     display: flex;
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px 0;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: #004134;
+    border-radius: 5px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
 
     &__key {
-        height: 40px;
-        width: 5.4%;
-        max-width: 90px;
-        margin: 3px;
-        border-radius: 4px;
-        border: none;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #fff;
-        font-size: 1.1rem;
-        outline: none;
-        cursor: pointer;
+        position: relative;
         display: inline-flex;
+        max-width: 90px;
+        width: 5.4%;
+        height: 40px;
+        margin: 3px;
+        padding: 0;
+        font-size: 1.1rem;
         align-items: center;
         justify-content: center;
         vertical-align: top;
-        padding: 0;
-        position: relative;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        cursor: pointer;
 
         &:active,&--press {
             background-color: rgba(255, 255, 255, 0.05);
