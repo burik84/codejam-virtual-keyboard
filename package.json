@@ -1,0 +1,26 @@
+{
+  "name": "live-virtual-keyboard",
+  "version": "1.0.0",
+  "description": "live coding from strim ",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burik84/codejam-virtual-keyboard.git"
+  },
+  "author": "burik84",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burik84/codejam-virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/burik84/codejam-virtual-keyboard#readme"
+}
