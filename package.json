@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "live coding from strim ",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "browser-sync start --server --files '*.css, *.html, *.js'"
   },
   "repository": {
     "type": "git",
