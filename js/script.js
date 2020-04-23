@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable import/extensions */
 import { get } from './storage.js';
 import Keyboard from './Keyboard.js';
